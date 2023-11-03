@@ -4,31 +4,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!--BoxIcon for Icon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container my-5 mx-auto">
-      <h1 class="text-muted text-center my-4">Weather App</h1>
-
-      <form class="change-location my-4 text-center text-muted">
-        <label for="city">Enter a location for weather information</label>
-        <input type="text" name="city" class="form-control p-4" />
-      </form>
-
-      <div class="card shadow-lg rounded">
-        <img src="https://via.placeholder.com/400x300" class="time card-img-top" />
-        <div class="icon bg-light mx-auto text-center">
-          <!-- icon here later -->
+    <div class="wrapper">
+      <header>
+        <i class='bx bxs-left-arrow-alt'></i>
+        Weather App
+      </header>
+      <!--도시 입력 섹션 Start!-->
+      <section class="input-part">
+        <p class="info-txt"></p>
+        <div class="content">
+          <input type="text" spellcheck="false" placeholder="Enter city name">
+          <div class="separator"></div>
+          <button>Get Device Loction</button>
         </div>
-        <div class="text-muted text-uppercase text-center details">
-          <h5 class="my-3">City name</h5>
-          <div class="my-3">Weather condition</div>
-          <div class="display-4 my-4">
-            <span>temp</span>
-            <span>&deg;C</span>
+      </section>
+      <!--도시 입력 섹션 End!-->
+
+      <!--날씨 정보 표시 섹션 Start!-->
+      <section class="weather-part">
+        <img src="" alt="Weather Icon"/>
+        <div class="temp">
+          <span class="numb">_</span>
+          <span class="degree">º</span>C
+        </div>
+        <div class="weather">_ _</div>
+        <div class="location">
+          <i class="bx bx-map"></i>
+          <span>_, _</span>
+        </div>
+        <div class="bottom-details">
+          <div class="column feels">
+            <i class="bx bxs-thermometer"></i>
+            <div class="details">
+              <div class="temp">
+                <span class="numb-2">_</span>
+                <span class="deg">🌡</span>
+              </div>
+              <p>Feels like</p>
+            </div>
+          </div>
+          <div class="column humidity">
+            <i class="bx bxs-droplet-half"></i>
+            <div class="details">
+              <span>_</span>
+              <p>Humidity</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <!--날씨 정보 표시 섹션 End!-->
     </div>
 
     <script src="scripts/forecast.js"></script>
