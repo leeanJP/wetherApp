@@ -27,13 +27,13 @@ locationBtn.addEventListener('click', ()=>{
 })
 
 function requestApi(city){
-    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=1e7c1e3d8c0a28c6883740779b5d921d`;
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID={키입력}`;
     fetchData();
 }
 
 function onSuccess(position){
     const{latitude, longitude} = position.coords; //위도 경도
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=1e7c1e3d8c0a28c6883740779b5d921d`;
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID={키입력}`;
     fetchData();
 }
 
